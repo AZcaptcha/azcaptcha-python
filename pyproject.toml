@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "azcaptcha"
+version = "1.0.0"
+description = "Official AZcaptcha SDK for Python — reCAPTCHA, hCaptcha, Turnstile and image captchas"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "AZcaptcha", email = "support@azcaptcha.com" }]
+keywords = ["captcha", "recaptcha", "hcaptcha", "turnstile", "azcaptcha", "2captcha"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://azcaptcha.com/lang/python"
+Documentation = "https://azcaptcha.com/docs"
+Repository = "https://github.com/AZcaptcha/azcaptcha-python"
+Changelog = "https://github.com/AZcaptcha/azcaptcha-python/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/azcaptcha"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
